@@ -1,0 +1,25 @@
+{
+  "name": "postcss-require",
+  "version": "0.1.0",
+  "author": "Izaak Schroeder <izaak.schroeder@gmail.com>",
+  "main": "dist/require.js",
+  "scripts": {
+    "lint": "./node_modules/.bin/eslint --ignore-path .gitignore .",
+    "prepublish": "./node_modules/.bin/babel -s inline -d dist src/",
+    "test": "npm run lint"
+  },
+  "dependencies": {
+    "object-path": "^0.9.2",
+    "resolve": "^1.1.6"
+  },
+  "peerDependencies": {
+    "postcss": ">=5"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.0.2",
+    "babel-preset-metalab": "^0.1.1",
+    "eslint": "^1.8.0",
+    "eslint-config-metalab": "^0.3.0",
+    "postcss": "^5.0.11"
+  }
+}
