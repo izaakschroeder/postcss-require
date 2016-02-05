@@ -5,7 +5,7 @@
   "main": "dist/require.js",
   "scripts": {
     "lint": "./node_modules/.bin/eslint --ignore-path .gitignore .",
-    "prepublish": "./node_modules/.bin/babel -s inline -d dist src/",
+    "prepublish": "./node_modules/.bin/babel -s -d dist src/",
     "test": "npm run lint"
   },
   "dependencies": {
