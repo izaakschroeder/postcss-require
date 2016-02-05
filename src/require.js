@@ -54,6 +54,15 @@ export default postcss.plugin('postcss-require', ({
       let count = 0;
       const check = () => {
         if (count === 0) {
+          css.walk((node) => {
+            if (node.type === 'decl' && isRelevant(node.value)) {
+              node.value = replace(node.value);
+            } else if (node.type === 'rule' && isRelevant(node.selector)) {
+              node.selector = replace(node.selector);
+            } else if (node.type === 'atrule' && isRelevant(node.params)) {
+              node.params = replace(node.params);
+            }
+          });
           resolve();
         }
       };
@@ -70,12 +79,6 @@ export default postcss.plugin('postcss-require', ({
             }
           });
           node.remove();
-        } else if (node.type === 'decl' && isRelevant(node.value)) {
-          node.value = replace(node.value);
-        } else if (node.type === 'rule' && isRelevant(node.selector)) {
-          node.selector = replace(node.selector);
-        } else if (node.type === 'atrule' && isRelevant(node.params)) {
-          node.params = replace(node.params);
         }
       });
       check();
