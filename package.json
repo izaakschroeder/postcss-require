@@ -2,6 +2,7 @@
   "name": "postcss-require",
   "version": "0.1.1",
   "author": "Izaak Schroeder <izaak.schroeder@gmail.com>",
+  "license": "CC0-1.0",
   "main": "dist/require.js",
   "scripts": {
     "lint": "./node_modules/.bin/eslint --ignore-path .gitignore .",
