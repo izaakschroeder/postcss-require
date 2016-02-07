@@ -2,6 +2,12 @@
 
 Load JavaScript values into your CSS. Integrates with [webpack].
 
+![build status](http://img.shields.io/travis/izaakschroeder/postcss-require/master.svg?style=flat)
+![coverage](http://img.shields.io/coveralls/izaakschroeder/postcss-require/master.svg?style=flat)
+![license](http://img.shields.io/npm/l/postcss-require.svg?style=flat)
+![version](http://img.shields.io/npm/v/postcss-require.svg?style=flat)
+![downloads](http://img.shields.io/npm/dm/postcss-require.svg?style=flat)
+
 ## Usage
 
 ```sh
